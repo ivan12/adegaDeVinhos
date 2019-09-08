@@ -1,0 +1,21 @@
+##################
+Rodando Servidor
+##################
+
+1) npm install
+
+2) npm start
+
+
+################################
+Publicando servidor na Umbler
+################################
+
+1) git add .
+
+2) git commit -m ".."
+
+3) git push umbler master
+
+
+https://app.umbler.com/ivanamorim.com.br/

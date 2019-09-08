@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Adega de Vinhos <ion-badge style="margin-left: 16px; background: #1a4878;">Qtd: {{ totalVinhos }}</ion-badge> <ion-badge style="margin-left: 13px; background: #4e8553;">R${{ precoTotal }},00</ion-badge>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bgWood">
+
+  <ion-card *ngFor="let vinho of vinhos" class="card-vinho">
+    <ion-card-header style="color: #FFF">{{ vinho.nome }} <ion-badge style="float: right; background: #000;">{{ vinho.quantidade }}</ion-badge></ion-card-header>
+    <ion-card-content>
+      <div class="list">
+        <a class="item item-thumbnail-left" style="border-radius: 3px; padding-bottom: 12px;">
+          <img *ngIf="vinho.fotos && vinho.fotos.length > 0" [src]="vinho.fotos[0]" (click)="visualizarVinho(vinho)">
+          <img *ngIf="!vinho.fotos" src="assets/img/vinho-padrao.jpg" (click)="visualizarVinho(vinho)">
+          <h4 class="descricao">{{ vinho.descricao }}</h4>
+        </a>
+        <div class="acoes">
+          <p style="float: left; color: #8e863f;">R$ {{ vinho.preco }},00</p>
+          <ion-icon item-end name="trash" style="float: right" (click)="deleteVinho(vinho)"></ion-icon>
+          <ion-icon item-end name="create" style="float: right; margin-right: 18px;" (click)="editaVinho(vinho)"></ion-icon>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<button ion-button block type="button" (click)="avancaNovoCadastro()" class="btn-wine btn-plus">+</button>

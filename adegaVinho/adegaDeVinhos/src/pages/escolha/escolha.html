@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <ion-icon name="wine"></ion-icon>
+      {{ vinho.nome }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bgWoodForm">
+
+  <ion-slides pager="true">
+      <ion-slide *ngFor="let foto of vinho.fotos">
+        <img src="{{foto}}" />
+      </ion-slide>
+  </ion-slides>
+
+  <ion-item-group>
+    <ion-item-divider color="light">
+      Preço: {{ vinho.preco }}
+    </ion-item-divider>
+    <ion-item>Safra: {{ vinho.safra }}</ion-item>
+    <ion-item>Pais: {{ vinho.pais }}</ion-item>
+    <ion-item>Quantidade: {{ vinho.quantidade }}</ion-item>
+    <ion-item>Descrição: {{ vinho.descricao }}</ion-item>
+    <ion-item>
+      Disponível:
+      <ion-toggle #toggle color="secondary" (ionChange)="atualizaTotal(toggle.checked)"></ion-toggle>
+    </ion-item>
+  </ion-item-group>
+  <button ion-button block type="button" (click)="avancaCadastro()" class="btn-wine">Editar</button>
+</ion-content>

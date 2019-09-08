@@ -1,0 +1,18 @@
+##################
+Rodando Aplicacao
+##################
+
+1) npm install
+
+2) ionic serve (rodar no navegador)
+
+3) ionic cordova run android --device (rodar no cel)
+
+
+////////////////////// Configurando a maquina ///////////////////////
+
+1) install java e configurar nas variaveis de ambiente
+
+2) install node
+
+3) install

@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngIf="vinho.id">Edição</ion-title>
+    <ion-title *ngIf="!vinho.id">Cadastro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="bgWoodForm">
+  <form (ngSubmit)="cadastrarVinho()" #formulario="ngForm" class="bgTransparent">
+      <ion-item>
+        <ion-label stacked>Nome:</ion-label>
+        <ion-input [(ngModel)]="vinho.nome" name="nome"></ion-input>
+      </ion-item>
+  
+      <ion-item> <!--(click)="selecionaData()" -->
+        <ion-label stacked>Safra(Ano):</ion-label>
+        <ion-input [(ngModel)]="vinho.safra" maxlength="4" type="number" name="safra"></ion-input>
+        <!--<ion-datetime disabled="true" [(ngModel)]="vinho.safra" name="data" displayFormat="DD/MM/YYYY"></ion-datetime>-->
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>Pais:</ion-label>
+        <ion-input [(ngModel)]="vinho.pais" name="pais"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Quantidade:</ion-label>
+        <ion-input [(ngModel)]="vinho.quantidade" maxlength="10" type="number" name="quantidade"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Preço:</ion-label>
+        <ion-input [(ngModel)]="vinho.preco" maxlength="10" type="number" name="preco"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Disponivel:</ion-label>
+        <ion-input [(ngModel)]="vinho.disponivel" name="disponivel"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Descrição:</ion-label>
+        <ion-input [(ngModel)]="vinho.descricao" maxlength="100" type="text" name="descricao"></ion-input>
+      </ion-item>
+  </form>
+  <button ion-button block type="button" (click)="formulario.ngSubmit.emit()" class="btn-wine">Salvar</button>
+</ion-content>
