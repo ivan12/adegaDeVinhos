@@ -16,3 +16,8 @@ Rodando Aplicacao
 2) install node
 
 3) install
+
+
+// icone do android
+
+adegaDeVinhos\resources\android\icon
