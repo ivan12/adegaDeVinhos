@@ -75,7 +75,7 @@ export class HomePage implements NavLifecycles {
     this.precoTotal = 0;
     this.vinhos.forEach(vinho => {
       this.totalVinhos += Number(vinho.quantidade);
-      this.precoTotal += Number(vinho.preco);
+      this.precoTotal += Number(vinho.preco * vinho.quantidade);
     })
   }
 
