@@ -1,8 +1,8 @@
 {
-  "name": "aluracar",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "adegaDeVinhos",
+  "version": "1.0",
+  "author": "Ivan Amorim",
+  "homepage": "http://www.inovagames.com.br",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",

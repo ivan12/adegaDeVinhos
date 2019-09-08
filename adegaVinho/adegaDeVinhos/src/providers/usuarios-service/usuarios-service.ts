@@ -8,14 +8,14 @@ const CHAVE = 'avatar-usuario';
 export class UsuariosServiceProvider {
 
   private _usuarioLogado: Usuario;
-  private _url2 = 'http://localhost:3000/api/login';
+  private _urlLocalHost = 'http://localhost:3000/api/login';
   private _url = 'http://ivanamorim-com-br.umbler.net/api/login';
 
   constructor(private _http: HttpClient) {
   }
 
   efetuaLogin(email, senha) {
-    return this._http.post<Usuario>(this._url, { email, senha})
+    return this._http.post<Usuario>(this._urlLocalHost, { email, senha})
               .do((usuario: Usuario) => this._usuarioLogado = usuario);
   }
 

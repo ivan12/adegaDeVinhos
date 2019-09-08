@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://java.sun.com/xml/ns/javaee" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="br.com.adega.de.vinhos" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://java.sun.com/xml/ns/javaee" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>AdegaDeVinhos</name>
-    <description>An awesome Ionic/Cordova app.</description>
+    <description>Adega de Vinhos - Gerenciamento de Estoque</description>
     <author email="amorim-ivan@hotmail.com" href="https://www.ivanamorim.com.br/">Ivan Amorim</author>
     <content src="index.html" />
     <access origin="*" />
